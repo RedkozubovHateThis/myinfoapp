@@ -23,10 +23,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-qf-snf">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-qf-snf">
                                         <rect key="frame" x="0.0" y="61" width="280" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -37,11 +37,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Forgot user name?"/>
+                                        <connections>
+                                            <action selector="forgotUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VF6-ue-Qpb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRK-kV-AXc">
                                         <rect key="frame" x="165" y="0.0" width="115" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Forgot password?"/>
+                                        <connections>
+                                            <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCu-6L-2u8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -49,6 +55,7 @@
                                 <rect key="frame" x="139" y="269" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N3W-Hi-a3f"/>
                                     <segue destination="4p6-3e-VqT" kind="presentation" modalPresentationStyle="fullScreen" id="SeB-tW-TZt"/>
                                 </connections>
                             </button>
@@ -69,6 +76,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="L83-kD-GN2"/>
+                    <connections>
+                        <outlet property="textFieldPassword" destination="pfN-qf-snf" id="F5Y-9C-M7Q"/>
+                        <outlet property="textFieldUserName" destination="Nmz-qS-YEX" id="Vf7-eF-aOS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +88,7 @@
         <!--Item-->
         <scene sceneID="gI3-QF-lP7">
             <objects>
-                <viewController id="Zdt-RF-ARq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Zdt-RF-ARq" customClass="HomeViewController" customModule="myinfoapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SX6-jv-PAy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,8 +100,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCE-zC-ToP">
+                                <rect key="frame" x="133" y="325" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="SX6-jv-PAy" eventType="touchUpInside" id="cbu-Qd-PnV"/>
+                                    <action selector="logout:" destination="Zdt-RF-ARq" eventType="touchUpInside" id="nN5-VL-o7V"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="m10-TM-3Us"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="AQs-06-nzQ"/>
@@ -103,7 +123,6 @@
         <!--View Controller-->
         <scene sceneID="cNa-Zm-fgb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tpu-x0-cy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="VTG-ve-Gfw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Vo-SW-zDe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -123,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="y1v-Br-EXQ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpu-x0-cy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2784" y="963"/>
         </scene>
@@ -140,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oN9-i1-aRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3791" y="958"/>
+            <point key="canvasLocation" x="3703" y="962"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y4D-ow-xyr">
@@ -164,7 +184,6 @@
         <!--Item-->
         <scene sceneID="xZV-0B-jlc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I5d-mc-0Bj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7YZ-b8-FCm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NZo-4k-zBC"/>
                     <toolbarItems/>
@@ -177,6 +196,7 @@
                         <segue destination="VTG-ve-Gfw" kind="relationship" relationship="rootViewController" id="XN9-Ff-IiU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5d-mc-0Bj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1886" y="964"/>
         </scene>

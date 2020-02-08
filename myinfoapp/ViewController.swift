@@ -10,11 +10,43 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textFieldUserName: UITextField!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    
+    let username = "Anton"
+    let password = "qwerty"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
-
+    @IBAction func logIn(_ sender: Any) {
+        if username == textFieldUserName.text && password == textFieldPassword.text{
+            UserDefaults.standard.set(textFieldUserName.text!, forKey: "Username")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+            navigationController?.pushViewController(vc!, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Ошибка", message: "Login или Password введен не верно", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Ок", style: .default, handler: nil)
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func forgotUsername(_ sender: Any) {
+        let alertForgotUsername = UIAlertController(title: "🧑🏽‍💻", message: "А username то Anton ", preferredStyle: .alert)
+        let okForgot = UIAlertAction(title: "Понял", style: .default, handler: nil)
+//        alert.addAction(ok)
+        alertForgotUsername.addAction(okForgot)
+        present(alertForgotUsername, animated: true, completion: nil)
+    }
+    @IBAction func forgotPassword(_ sender: Any) {
+        let alertForgotPassword = UIAlertController(title: "🔑", message: "Password qwerty ", preferredStyle: .alert)
+        let okForgotPass = UIAlertAction(title: "Понял", style: .default, handler: nil)
+        //        alert.addAction(ok)
+        alertForgotPassword.addAction(okForgotPass)
+        present(alertForgotPassword, animated: true, completion: nil)
+    }
 }
 

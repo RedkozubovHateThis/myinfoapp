@@ -13,6 +13,7 @@
 		ED632E6023EDD0F00035229E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED632E5E23EDD0F00035229E /* Main.storyboard */; };
 		ED632E6223EDD0F10035229E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED632E6123EDD0F10035229E /* Assets.xcassets */; };
 		ED632E6523EDD0F10035229E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED632E6323EDD0F10035229E /* LaunchScreen.storyboard */; };
+		ED69723723EF2F270077FDB2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69723623EF2F270077FDB2 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ED632E6123EDD0F10035229E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED632E6423EDD0F10035229E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED632E6623EDD0F10035229E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED69723623EF2F270077FDB2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				ED632E5823EDD0F00035229E /* AppDelegate.swift */,
 				ED632E5A23EDD0F00035229E /* SceneDelegate.swift */,
+				ED69723623EF2F270077FDB2 /* HomeViewController.swift */,
 				ED632E5C23EDD0F00035229E /* ViewController.swift */,
 				ED632E5E23EDD0F00035229E /* Main.storyboard */,
 				ED632E6123EDD0F10035229E /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				ED632E5D23EDD0F00035229E /* ViewController.swift in Sources */,
 				ED632E5923EDD0F00035229E /* AppDelegate.swift in Sources */,
 				ED632E5B23EDD0F00035229E /* SceneDelegate.swift in Sources */,
+				ED69723723EF2F270077FDB2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
