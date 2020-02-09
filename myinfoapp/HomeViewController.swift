@@ -15,7 +15,7 @@ class HomeViewController: ViewController {
         super.viewDidLoad()
     }
 
-    
+//MARK:- IBAction
     @IBAction func logout(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: "Username")
         let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController")

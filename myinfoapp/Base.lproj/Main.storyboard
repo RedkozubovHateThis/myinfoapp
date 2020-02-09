@@ -85,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="1136.25" y="137.32394366197184"/>
         </scene>
-        <!--Item-->
+        <!--Привет-->
         <scene sceneID="gI3-QF-lP7">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="Zdt-RF-ARq" customClass="HomeViewController" customModule="myinfoapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,10 +110,10 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="m10-TM-3Us"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="AQs-06-nzQ"/>
+                    <tabBarItem key="tabBarItem" title="Привет" image="sunrise.fill" catalog="system" id="AQs-06-nzQ"/>
                     <navigationItem key="navigationItem" id="Xay-nz-Uvn"/>
                     <connections>
                         <outlet property="labelWithUsername" destination="l8r-t1-lKt" id="9et-zC-Cpe"/>
@@ -184,11 +184,11 @@
             </objects>
             <point key="canvasLocation" x="1886.25" y="136.26760563380282"/>
         </scene>
-        <!--Item-->
+        <!--Инфо-->
         <scene sceneID="xZV-0B-jlc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7YZ-b8-FCm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NZo-4k-zBC"/>
+                    <tabBarItem key="tabBarItem" title="Инфо" image="person.circle" catalog="system" id="NZo-4k-zBC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bRC-nE-YUB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -204,4 +204,8 @@
             <point key="canvasLocation" x="1886" y="964"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
+        <image name="sunrise.fill" catalog="system" width="64" height="48"/>
+    </resources>
 </document>

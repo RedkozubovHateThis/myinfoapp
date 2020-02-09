@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+//MARK:- IBAction
+    
     @IBAction func logIn(_ sender: Any) {
         if username == textFieldUserName.text && password == textFieldPassword.text{
             UserDefaults.standard.set(textFieldUserName.text!, forKey: "Username")
@@ -37,16 +38,28 @@ class ViewController: UIViewController {
     @IBAction func forgotUsername(_ sender: Any) {
         let alertForgotUsername = UIAlertController(title: "🧑🏽‍💻", message: "А username то Anton ", preferredStyle: .alert)
         let okForgot = UIAlertAction(title: "Понял", style: .default, handler: nil)
-//        alert.addAction(ok)
         alertForgotUsername.addAction(okForgot)
         present(alertForgotUsername, animated: true, completion: nil)
     }
     @IBAction func forgotPassword(_ sender: Any) {
         let alertForgotPassword = UIAlertController(title: "🔑", message: "Password qwerty ", preferredStyle: .alert)
         let okForgotPass = UIAlertAction(title: "Понял", style: .default, handler: nil)
-        //        alert.addAction(ok)
         alertForgotPassword.addAction(okForgotPass)
         present(alertForgotPassword, animated: true, completion: nil)
     }
+    
+}
+//MARK:- UITextFielDelegate
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
+    }
+    
 }
 
