@@ -115,6 +115,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="AQs-06-nzQ"/>
                     <navigationItem key="navigationItem" id="Xay-nz-Uvn"/>
+                    <connections>
+                        <outlet property="labelWithUsername" destination="l8r-t1-lKt" id="9et-zC-Cpe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="un2-UE-wEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
